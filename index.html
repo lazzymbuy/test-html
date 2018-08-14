@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>responsif html</title>
+    <style>
+    body
+        {
+            text-align: center;
+        }
+        @media screen and (min-width:800px){
+        .konten
+        {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 100px;
+            grid-gap: 8px; /* untuk kondisi gap antara kkolom dan baris sama */
+            max-width: 900px;
+            grid-template-areas: 
+            "area1 area1 area1"
+            "area2 . area3"
+            "area2 . area3"
+            "area4 area4 area5"
+            "area6 area6 area5"
+            "area7 area7 area7";
+
+        }}
+        .konten>div /* untuk memanggil hanya child dalam parent menggunakan ">" */
+        {
+            background-color: lightblue;
+            padding:40px;
+        }
+        .konten>div:nth-child(even)
+        {
+            background-color: lightpink;
+        }
+        #e1
+        {
+            grid-area: area1;
+        }
+        #e2
+        {
+            grid-area: area2;
+        }
+        #e3
+        {
+            grid-area: area3;
+        }
+        #e6
+        {
+            grid-area: area4;
+        }
+        #e7
+        {
+            grid-area: area5;
+        }
+        #e8
+        {
+            grid-area: area6;
+        }
+        #e9
+        {
+            grid-area: area7;
+        }
+    </style>
+</head>
+<body>
+        <center>
+                <div class="konten">
+                    <div id="e1">1</div>
+                    <div id="e2">2</div>
+                    <div id="e3">3</div>
+                    <div id="e4">4</div>
+                    <div id="e5">5</div>
+                    <div id="e6">6</div>
+                    <div id="e7">7</div>
+                    <div id="e8">8</div>
+                    <div id="e9">9</div>
+                </div>
+            </center>
+</body>
+</html>
